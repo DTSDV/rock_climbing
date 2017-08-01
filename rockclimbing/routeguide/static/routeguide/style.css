@@ -1,0 +1,108 @@
+/************************************* INDEX.HTML *************************************/
+
+/* Setting the background */
+body {
+    background-repeat: no-repeat;
+}
+
+/* Editing the NavBar */
+.navbar {
+    border-radius: 0;
+}
+
+.navbar-brand {
+    font-family: 'Plaster', cursive;
+}
+
+/* Center logo on index */
+#center-heading {
+    color:white;
+    text-align:center;
+    font-family: 'Cutive Mono', monospace;
+}
+
+#center-logo {
+    font-size:400%;
+    font-family: 'Gruppo', cursive;
+}
+
+/* Description on index */
+#description {
+    color:white;
+    text-align:center;
+    font-family: 'Cutive Mono', monospace;
+    font-size:120%;
+}
+
+/* Indoor or Outdoor buttons on index */
+.io_btn {
+    background-color:Transparent;
+    color:white;
+    font-size:200%;
+    display:inline-block;
+    padding:12px 16px 12px 16px;
+    margin:0px 10px 0px 10px;
+    transition:.62s;
+}
+
+.io_btn:hover {
+   background-color:gray;
+}
+
+#iobtn_wrapper {
+    position:relative;
+    top:3em;
+    text-align:center;
+}
+
+/************************************* INDOOR.HTML *************************************/
+.gym_logo {
+    height:250px;
+    width:250px;
+}
+
+#gymlist_bg {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#index_header {
+    color:white;
+    text-align:center;
+    font-size:3.4em;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing:2px;
+}
+
+.gym_name {
+    color:white;
+}
+
+.gymlist {
+    padding-left:15px;
+    padding-right:15px;
+    padding-top:30px;
+    text-align:center;
+    font-size:1em;
+}
+.gymlist li{
+    list-style-type: none;
+    padding-bottom:30px;
+}
+
+/************************************* INDOOR/<gym id>.HTML *************************************/
+
+#gym_id_logo {
+    display:block;
+    margin:auto;
+    height:350px;
+}
+
+.route_pic {
+    width:330px;
+    height:450px;
+}
+
+.route_details {
+    text-align:center;
+    list-style-type: none;
+}

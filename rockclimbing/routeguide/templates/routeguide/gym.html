@@ -1,0 +1,23 @@
+{% extends 'routeguide/base.html' %}
+
+{% block body %}
+    <img id="gym_id_logo" src="{{ gym.gym_logo }}">
+    <h1 style="text-align:center; padding-top:2em">List of Routes at {{ gym.name }}</h1>
+
+    <!-- Showing list of active routes -->
+    <div class="container">
+            <div class="row">
+                <ul>
+                    {% for route in gym.route_set.all %}
+                        {% if route.is_up == True %}
+                            <div class="col-8 col-md-4 text-center"  style="margin:0 auto">
+                                <a href="#"><img style="padding-top:30px" class = 'route_pic' src="{{ route.climb_picture }}"></a>
+                                <li class="route_details">{{ route }}</li>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+        </div>
+    </div>
+
+{% endblock %}

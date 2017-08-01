@@ -1,0 +1,22 @@
+{% extends 'routeguide/base.html' %}
+
+{% block body %}
+
+    <!-- Changing The Background -->
+    <style>
+        body {
+            background: gray url('../../static/routeguide/images/mountain.jpg');
+        }
+    </style>
+
+    <!-- Title and Description -->
+    <h1 id="center-heading">Welcome to <span><h1 id="center-logo">The Beta</h1></span></h1>
+    <p id="description">The Beta is a simple web application where users can upload <br>
+        their method of completing various rock climbing routes.<br> Begin by selecting
+        indoor or outdoor locations.</p>
+    <div id="iobtn_wrapper">
+        <a href="/index/indoor/"><button class="io_btn" type="button">Indoor</button></a>
+        <a href="#"><button class="io_btn" type="button">Outdoor</button></a>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'routeguide/base.html' %}
+
+{% block body %}
+
+    <!-- Changing The Background -->
+    <style>
+        body {
+            background: gray url('../../static/routeguide/images/boulderwall.jpg');
+        }
+    </style>
+
+    <!-- Generate list of gyms -->
+    {% if all_gyms %}
+        <div class="container" id="gymlist_bg">
+            <h1 id="index_header">List of Indoor Climbing Gyms</h1>
+            <div class="row">
+                <ul class='gymlist'>
+                    {%  for gym in all_gyms %}
+                        <div class="col-6 col-md-3">
+                            <a href="/index/indoor/{{ gym.id }}/">
+                                <img style="border-radius:150px" src="{{ gym.gym_logo }}" class="gym_logo">
+                            </a>
+                            <li class='gym_name' style="padding:10px 10px 15px 10px list-style-type: none">
+                                <span style="font-size:1.35em; color:deepskyblue">{{ gym.name }}</span><br>
+                                    {{ gym.city }} - {{ gym.province }}
+                            </li>
+                        </div>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% else %}
+        <p>There are no gyms.</p>
+    {% endif %}
+
+{% endblock %}
